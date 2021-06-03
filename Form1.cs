@@ -18,7 +18,7 @@ namespace StudentsAndTagsManagement
 {
     public partial class Form1 : Form
     {
-        //declaring database connection and parameters
+        //declaring database connection and parameter
         SqlConnection con = new SqlConnection(@"Server=tcp:abcinstitute.database.windows.net,1433;Initial Catalog=time-table;Persist Security Info=False;User ID=biyoni;Password=itpm12345@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         SqlCommand cmd;
         SqlDataAdapter adapt;
