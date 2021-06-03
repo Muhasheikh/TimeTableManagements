@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5EF4DC5-5990-4C62-A720-8D24538C8B54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TimeTableManagements</RootNamespace>
+    <AssemblyName>TimeTableManagements</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add WorkingDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add WorkingDays.designer.cs">
+      <DependentUpon>Add WorkingDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\addSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addSession.designer.cs">
+      <DependentUpon>addSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AvaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AvaControl.designer.cs">
+      <DependentUpon>AvaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConsecutiveSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConsecutiveSessions.designer.cs">
+      <DependentUpon>FormConsecutiveSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDashboard.designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNonAvailability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNonAvailability.designer.cs">
+      <DependentUpon>FormNonAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNonOverlappingSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNonOverlappingSessions.designer.cs">
+      <DependentUpon>FormNonOverlappingSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormParallelSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormParallelSessions.designer.cs">
+      <DependentUpon>FormParallelSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSessionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSessionManagement.designer.cs">
+      <DependentUpon>FormSessionManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStudentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStudentManagement.designer.cs">
+      <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTagManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTagManagement.designer.cs">
+      <DependentUpon>FormTagManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lec.designer.cs">
+      <DependentUpon>Lec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\lecturerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\lecturerControl.designer.cs">
+      <DependentUpon>lecturerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\location.designer.cs">
+      <DependentUpon>location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LocationMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocationMgt.designer.cs">
+      <DependentUpon>LocationMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageLec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageLec.designer.cs">
+      <DependentUpon>ManageLec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\manageSess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\manageSess.designer.cs">
+      <DependentUpon>manageSess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageSub.designer.cs">
+      <DependentUpon>ManageSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Room.designer.cs">
+      <DependentUpon>Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomControl.designer.cs">
+      <DependentUpon>RoomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RoomManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomManage.designer.cs">
+      <DependentUpon>RoomManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentControl1.designer.cs">
+      <DependentUpon>StudentControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\subject.designer.cs">
+      <DependentUpon>subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeTable.designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkControl.designer.cs">
+      <DependentUpon>WorkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lecturerTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lecturerTime.designer.cs">
+      <DependentUpon>lecturerTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainControl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeColors.cs" />
+    <Compile Include="TimeTableManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeTableManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add WorkingDays.resx">
+      <DependentUpon>Add WorkingDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addSession.resx">
+      <DependentUpon>addSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AvaControl.resx">
+      <DependentUpon>AvaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConsecutiveSessions.resx">
+      <DependentUpon>FormConsecutiveSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNonAvailability.resx">
+      <DependentUpon>FormNonAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNonOverlappingSessions.resx">
+      <DependentUpon>FormNonOverlappingSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormParallelSessions.resx">
+      <DependentUpon>FormParallelSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSessionManagement.resx">
+      <DependentUpon>FormSessionManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStudentManagement.resx">
+      <DependentUpon>FormStudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTagManagement.resx">
+      <DependentUpon>FormTagManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lec.resx">
+      <DependentUpon>Lec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\lecturerControl.resx">
+      <DependentUpon>lecturerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\location.resx">
+      <DependentUpon>location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocationMgt.resx">
+      <DependentUpon>LocationMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageLec.resx">
+      <DependentUpon>ManageLec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\manageSess.resx">
+      <DependentUpon>manageSess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageSub.resx">
+      <DependentUpon>ManageSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Room.resx">
+      <DependentUpon>Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomControl.resx">
+      <DependentUpon>RoomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomManage.resx">
+      <DependentUpon>RoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentControl1.resx">
+      <DependentUpon>StudentControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\subject.resx">
+      <DependentUpon>subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkControl.resx">
+      <DependentUpon>WorkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lecturerTime.resx">
+      <DependentUpon>lecturerTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TimeTableManagementDataSet.xsc">
+      <DependentUpon>TimeTableManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeTableManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeTableManagementDataSet.xss">
+      <DependentUpon>TimeTableManagementDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\TimeTableManagement.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
